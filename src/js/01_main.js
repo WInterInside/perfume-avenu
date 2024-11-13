@@ -169,3 +169,40 @@
 // 	input.addEventListener("blur", mask, false);
 // 	input.addEventListener("keydown", mask, false)
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Функция создания карты
+	function createMap(xID, coords) {
+		const mapContainer = document.getElementById(xID);
+		if (mapContainer) {
+			ymaps.ready(function () {
+				const myMap = new ymaps.Map(xID, {
+					center: coords,
+					zoom: 17,
+					controls: []
+				});
+
+				const myPlacemark = new ymaps.Placemark(coords,
+					{
+						hintContent: 'г. Воронеж, ул. Солнечная, 13 «Е», помещение 2',
+						balloonContent: 'г. Воронеж, ул. Солнечная, 13 «Е», помещение 2'
+					},
+					{
+						iconLayout: 'default#image',
+						iconImageHref: 'img/pin.svg',
+						iconImageSize: [32, 43],
+						iconImageOffset: [80, 0]
+					}
+				);
+
+				myMap.geoObjects.add(myPlacemark);
+				myMap.behaviors.disable('scrollZoom');
+			});
+		} else {
+			console.error("Элемент с ID", xID, "не найден.");
+		}
+	}
+
+	// Вызов функции создания карты
+	createMap('footer__map', [51.678526, 39.164103]);
+});
