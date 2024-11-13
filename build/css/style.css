@@ -1044,6 +1044,11 @@
 .footer__main {
   padding: 100px 0;
 }
+@media only screen and (max-width: 1380px) {
+  .footer__main {
+    padding: 30px 0;
+  }
+}
 .footer__logo {
   position: relative;
   padding-bottom: 32px;
@@ -1065,6 +1070,11 @@
       flex-shrink: 0;
   width: 220.64px;
   height: 37px;
+}
+@media only screen and (max-width: 610px) {
+  .footer__logo {
+    margin: 0 auto;
+  }
 }
 .footer__time {
   display: -webkit-box;
@@ -1117,6 +1127,11 @@
   line-height: 18.2px;
   color: rgba(255, 255, 255, 0.6392156863);
 }
+@media only screen and (max-width: 610px) {
+  .footer__requisites {
+    text-align: center;
+  }
+}
 .footer__nav {
   list-style: none;
   padding: 0;
@@ -1149,10 +1164,22 @@
   font-size: 14px;
   line-height: 22px;
 }
+@media only screen and (max-width: 900px) {
+  .footer__address {
+    text-align: center;
+  }
+}
 .footer__map {
   border-radius: 16px;
   overflow: hidden;
-  margin-top: auto;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 900px) {
+  .footer__map {
+    overflow: visible;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+  }
 }
 .footer__brands {
   list-style: none;
@@ -1202,6 +1229,14 @@
         flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 610px) {
+  .footer__columns {
+    gap: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .footer__column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1211,8 +1246,70 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.footer__column--address {
+  width: 360px;
+}
 .footer__column--info {
   gap: 42px;
+}
+@media only screen and (max-width: 900px) {
+  .footer__column--address {
+    width: 100%;
+  }
+}
+.footer__group {
+  display: contents;
+}
+@media only screen and (max-width: 1380px) {
+  .footer__group--contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .footer__group--links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .footer__group--contacts {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .footer__group--links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .footer__group--links {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__group--contacts {
+    margin-top: 0;
+  }
 }
 .footer__tel {
   display: -webkit-box;
@@ -1248,6 +1345,16 @@
     opacity: 0.7;
   }
 }
+@media only screen and (max-width: 900px) {
+  .footer__tel {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .footer__mail {
   font-size: 14px;
   font-weight: 400;
@@ -1262,6 +1369,12 @@
     opacity: 0.7;
   }
 }
+@media only screen and (max-width: 900px) {
+  .footer__mail {
+    margin-left: 0;
+    text-align: center;
+  }
+}
 .footer__controls {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1271,7 +1384,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: auto;
+  margin-top: 16px;
 }
 .footer__button {
   text-transform: uppercase;
@@ -1310,7 +1423,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media only screen and (max-width: 585px) {
+@media only screen and (max-width: 900px) {
   .footer__bottom-content {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -2988,7 +3101,7 @@ body.is-popup-open {
   margin: 0 auto;
   padding: 0 240px;
 }
-@media only screen and (max-width: 1690px) {
+@media only screen and (max-width: 1750px) {
   .container {
     padding: 0 40px;
   }
@@ -3651,7 +3764,7 @@ body.is-popup-open {
   margin: 0 auto;
   padding: 0 240px;
 }
-@media only screen and (max-width: 1690px) {
+@media only screen and (max-width: 1750px) {
   .container {
     padding: 0 40px;
   }

@@ -14,6 +14,10 @@
 
 	&__main {
 		padding: 100px 0;
+
+		@media only screen and (max-width: 1380px) {
+			padding: 30px 0;
+		}
 	}
 
 	&__logo {
@@ -37,6 +41,10 @@
 			flex-shrink: 0;
 			width: 220.64px;
 			height: 37px;
+		}
+
+		@media only screen and (max-width: 610px) {
+			margin: 0 auto;
 		}
 	}
 
@@ -80,6 +88,10 @@
 			line-height: 18.2px;
 			color: #FFFFFFA3;
 		}
+
+		@media only screen and (max-width: 610px) {
+			text-align: center;
+		}
 	}
 
 	&__nav {
@@ -111,12 +123,22 @@
 		font-style: normal;
 		font-size: 14px;
 		line-height: 22px;
+
+		@media only screen and (max-width: 900px) {
+			text-align: center;
+		}
 	}
 
 	&__map {
 		border-radius: 16px;
 		overflow: hidden;
-		margin-top: auto;
+		margin-top: 16px;
+
+		@media only screen and (max-width: 900px) {
+			overflow: visible;
+			width: calc(100% + 40px);
+			margin-left: -20px;
+		}
 	}
 
 	&__brands {
@@ -158,14 +180,74 @@
 		@media only screen and (max-width: 1100px) {
 			flex-wrap: wrap;
 		}
+
+		@media only screen and (max-width: 610px) {
+			gap: 50px;
+			justify-content: center;
+		}
 	}
 
 	&__column {
 		display: flex;
 		flex-direction: column;
 
+		&--address {
+			width: 360px;
+		}
+
 		&--info {
 			gap: 42px;
+		}
+
+		@media only screen and (max-width: 900px) {
+			&--address {
+				width: 100%;
+			}
+		}
+	}
+
+	&__group {
+		display: contents;
+
+		@media only screen and (max-width: 1380px) {
+			&--contacts {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+		}
+
+		@media only screen and (max-width: 1080px) {
+			&--links {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+			&--contacts {
+				width: 100%;
+				margin-top: 50px;
+			}
+
+			&--links {
+				display: flex;
+				flex-direction: row;
+				gap: 30px;
+			}
+		}
+
+		@media only screen and (max-width: 610px) {
+			&--links {
+				width: 100%;
+				justify-content: center;
+			}
+
+			&--contacts {
+				margin-top: 0;
+			}
+
 		}
 	}
 
@@ -198,6 +280,11 @@
 				}
 			}
 		}
+
+		@media only screen and (max-width: 900px) {
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	
 	&__mail {
@@ -213,13 +300,18 @@
 				opacity: .7;
 			}
 		}
+
+		@media only screen and (max-width: 900px) {
+			margin-left: 0;
+			text-align: center;
+		}
 	}
 
 	&__controls {
 		display: flex;
 		gap: 8px;
 		flex-direction: column;
-		margin-top: auto;
+		margin-top: 16px;
 	}
 
 	&__button {
@@ -255,7 +347,7 @@
 			width: 100%;
 			justify-content: space-between;
 
-			@media only screen and (max-width: 585px) {
+			@media only screen and (max-width: 900px) {
 				width: 100%;
 				flex-direction: column;
 				gap: 5px;
