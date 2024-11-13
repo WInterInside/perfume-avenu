@@ -1,0 +1,32 @@
+.sitemap {
+	padding: 40px 0;
+
+	& ul {
+		list-style: square;
+		display: flex;
+		width: 50%;
+		flex-direction: column;
+		gap: 24px;
+
+		& li {
+			&:not(:last-child) {
+				border-bottom: 1px solid rgb(110, 110, 110);
+			}
+
+			& a {
+				text-transform: uppercase;
+				font-size: 24px;
+				line-height: 36px;
+				font-weight: 600;
+				color: #214250;
+				transition: opacity .3s;
+
+				@media (hover: hover) {
+					&:hover {
+						opacity: .7;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	text-align: center;
+	justify-content: center;
+	overflow: hidden;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color .3s, background-color .3s, opacity .3s, box-shadow .3s;
+
+	font-family: Onest;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 17.85px;
+
+	color: #667884;
+	background-color: #66788452;
+
+	padding: 20px 40px;
+	border-radius: 64px;
+	border: none;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: darken($color: #66788452, $amount: 50%);
+			color: #ffffff;
+		}
+	}
+}

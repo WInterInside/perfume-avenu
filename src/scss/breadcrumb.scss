@@ -1,0 +1,33 @@
+.breadcrumbs {
+	margin-top: 20px;
+	@media (max-width: 769px) {
+		display: none;
+	}
+
+	& a {
+		font-size: 14px;
+		line-height: 20px;
+		color: #214250;
+	}
+
+	& ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		width: max-content;
+
+		font-size: 14px;
+		line-height: 20px;
+		color: #214250;
+	}
+
+	& ol li:not(:last-child) {
+		margin-right: 17px;
+	}
+
+	.span_m_l_20 {
+		margin-left: 15px;
+	}
+}

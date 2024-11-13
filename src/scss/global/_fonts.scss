@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Optima';
+	src: url('../fonts/Optima-Bold.woff2') format('woff2'),
+		url('../fonts/Optima-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Optima';
+	src: url('../fonts/Optima.woff2') format('woff2'),
+		url('../fonts/Optima.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Peignot';
+	src: url('../fonts/Peignot_cyr.woff2') format('woff2'),
+		url('../fonts/Peignot_cyr.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+// это в локал фонтс
+// @include font-face("Optima", "Optima-Bold", 700);
+// @include font-face("Optima", "Optima", 400);
+// @include font-face("Peignot", "Peignot", 400);
