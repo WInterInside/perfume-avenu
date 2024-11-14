@@ -37,7 +37,11 @@ body {
 	position: relative;
 	flex-grow: 1;
 	transition: padding .3s;
-	// padding-top: 186px;
+	padding-top: 230px;
+
+	@media only screen and (max-width: 1000px) {
+		padding-top: 94px;
+	}
 
 	& h1 {
 		margin: 100px 0;

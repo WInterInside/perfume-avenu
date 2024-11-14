@@ -1686,16 +1686,14 @@
   }
 }
 .header {
-  background-color: transparent;
+  position: fixed;
   z-index: 99;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
   -webkit-transition: height 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
   transition: height 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
   transition: box-shadow 0.3s, height 0.3s, transform 0.3s;
   transition: box-shadow 0.3s, height 0.3s, transform 0.3s, -webkit-box-shadow 0.3s, -webkit-transform 0.3s;
+  background-color: #ffffff;
 }
 .header__header {
   display: -webkit-box;
@@ -1819,6 +1817,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
 }
 @media only screen and (max-width: 1000px) {
   .header__wrapper {
@@ -1970,11 +1970,6 @@
 @media (hover: hover) {
   .header__nav-link:hover {
     opacity: 0.8;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .header__nav {
-    padding: 0 0 10px 0;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -2246,6 +2241,57 @@ body.is-nav-open .header__burger {
 @media (hover: hover) {
   body.is-nav-open .header__burger:hover {
     background-color: #66a316;
+  }
+}
+
+body.is-scrolled .header {
+  -webkit-transform: translateY(-76px);
+      -ms-transform: translateY(-76px);
+          transform: translateY(-76px);
+  -webkit-box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.7607843137);
+          box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.7607843137);
+}
+body.is-scrolled .header__wrapper {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 36px 0 46px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+  body.is-scrolled .header__wrapper {
+    padding: 10px 0;
+  }
+}
+body.is-scrolled .header__nav {
+  -webkit-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+          transform: translateY(16px);
+}
+@media only screen and (max-width: 1000px) {
+  body.is-scrolled .header__nav {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  body.is-scrolled .header {
+    -webkit-transform: translateY(-44px);
+        -ms-transform: translateY(-44px);
+            transform: translateY(-44px);
+  }
+}
+body.is-scrolled .main {
+  padding-top: 120px;
+}
+@media only screen and (max-width: 1000px) {
+  body.is-scrolled .main {
+    padding-top: 44px;
   }
 }
 .hero {
@@ -3268,6 +3314,12 @@ body.is-popup-open {
           flex-grow: 1;
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
+  padding-top: 230px;
+}
+@media only screen and (max-width: 1000px) {
+  .main {
+    padding-top: 94px;
+  }
 }
 .main h1 {
   margin: 100px 0;
@@ -3507,15 +3559,15 @@ button::-moz-selection {
   font-display: swap;
 }
 @font-face {
-  font-family: "Optima";
-  src: local("Optima"), url("../fonts/Optima.woff2") format("woff2"), url("../fonts/Optima.woff") format("woff");
+  font-family: "Peignot_cyr";
+  src: local("Peignot_cyr"), url("../fonts/Peignot_cyr.woff2") format("woff2"), url("../fonts/Peignot_cyr.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Peignot_cyr";
-  src: local("Peignot_cyr"), url("../fonts/Peignot_cyr.woff2") format("woff2"), url("../fonts/Peignot_cyr.woff") format("woff");
+  font-family: "Optima";
+  src: local("Optima"), url("../fonts/Optima.woff2") format("woff2"), url("../fonts/Optima.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -3931,6 +3983,12 @@ body.is-popup-open {
           flex-grow: 1;
   -webkit-transition: padding 0.3s;
   transition: padding 0.3s;
+  padding-top: 230px;
+}
+@media only screen and (max-width: 1000px) {
+  .main {
+    padding-top: 94px;
+  }
 }
 .main h1 {
   margin: 100px 0;
