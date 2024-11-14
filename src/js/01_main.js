@@ -1,5 +1,6 @@
-// const body = document.body;
-// const navToggle = document.querySelector('[data-element~="navToggle"]');
+const body = document.body;
+const navToggle = document.querySelector('[data-element~="navToggle"]');
+
 // const navMore = document.querySelector('.header__nav-more');
 // const orderBtn = document.querySelector('[data-element="orderBtn"]');
 // const modal = document.querySelector('[data-element="orderForm"]');
@@ -7,17 +8,17 @@
 // const overlay = modal.querySelector('.popup__overlay');
 // const swipeBtn = document.querySelector('[data-element="popupSwipe"]');
 
-// const toggleNav = () => {
-// 	if (!body.classList.contains('is-nav-open')) {
-// 		body.classList.add('is-nav-open');
-// 	} else {
-// 		body.classList.remove('is-nav-open');
-// 	}
-// };
+const toggleNav = () => {
+	if (!body.classList.contains('is-nav-open')) {
+		body.classList.add('is-nav-open');
+	} else {
+		body.classList.remove('is-nav-open');
+	}
+};
 
-// const handleScroll = () => {
-// 	(window.scrollY > 0) ?  body.classList.add('is-scrolled') : body.classList.remove('is-scrolled');
-// }
+const handleScroll = () => {
+	(window.scrollY > 0) ?  body.classList.add('is-scrolled') : body.classList.remove('is-scrolled');
+}
 
 // const closeModal = () => {
 // 	modal.classList.remove('is-open');
@@ -29,9 +30,9 @@
 // 	body.classList.add('is-popup-open');
 // }
 
-// navToggle.addEventListener('click', toggleNav);
+navToggle.addEventListener('click', toggleNav);
 // navMore.addEventListener('click', toggleNav);
-// window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll", handleScroll);
 
 // // Add event listener to document to close nav when clicking outside
 // document.addEventListener('click', (e) => {

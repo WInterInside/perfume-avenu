@@ -4,7 +4,7 @@
 	align-items: center;
 	background-color: #2E3237;
 	color: #F3F0E2DB;
-	width: 100%;	
+	width: 100%;
 
 	&__wrapper {
 		display: flex;
@@ -82,7 +82,7 @@
 		padding: 0;
 		margin: 0;
 
-		& li span {
+		&-text {
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 18.2px;
@@ -239,6 +239,8 @@
 		}
 
 		@media only screen and (max-width: 610px) {
+			text-align: center;
+
 			&--links {
 				width: 100%;
 				justify-content: center;
@@ -286,7 +288,7 @@
 			align-items: center;
 		}
 	}
-	
+
 	&__mail {
 		font-size: 14px;
 		font-weight: 400;
