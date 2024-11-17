@@ -13,7 +13,7 @@ body {
 }
 
 body {
-	color: #181C1DA3;
+	color: #2E3237;
 	font-family: "Onest", serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
@@ -41,16 +41,6 @@ body {
 
 	@media only screen and (max-width: 1000px) {
 		padding-top: 94px;
-	}
-
-	& h1 {
-		margin: 100px 0;
-		font-family: 'Peignot';
-		font-size: 96px;
-		font-weight: 400;
-		line-height: 100.32px;
-		text-align: left;
-		color: #181C1D;
 	}
 }
 
@@ -145,6 +135,14 @@ img {
 
 .svg-icon {
 	fill: currentColor;
+}
+
+.icon {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
 }
 
 a,

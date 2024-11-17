@@ -27,6 +27,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
 	<title>PERFUME AVENUE | Главная</title>
 </head>
 
@@ -151,174 +153,154 @@
 			<section class="hero">
 				<div class="container">
 					<div class="hero__wrapper">
-						<h1>PERFUME AVENUE</h1>
-						<!-- <div class="hero__content">
-							<p class="hero__caption">Производим более 70 моделей сертифицированных систем&nbsp;вентиляции&nbsp;с:</p>
-							<ul class="hero__list">
-								<li class="hero__item">- Гарантией от 3 до 5 лет</li>
-								<li class="hero__item">- Полным сервисным обслуживанием</li>
-								<li class="hero__item">- Доставкой по всей РФ </li>
-							</ul>
-							<a href="/" class="hero__button button button--green">Посмотреть модели</a>
+						<div class="hero__caption">
+							<h1 class="hero__title">PERFUME AVENUE</h1>
+							<span class="hero__subtitle">ОРИГИНАЛЬНАЯ ЛЮКСОВАЯ ПАРФЮМЕРИЯ ОПТОМ</span>
 						</div>
 
-						<div class="hero__img">
-							<img src="img/hero-logo.png" alt="large logo">
-						</div> -->
+						<ul class="hero__list">
+							<li class="hero__item">Бережная упаковка</li>
+							<li class="hero__item">Выгодные условия для партнеров</li>
+							<li class="hero__item">Весь товар сертифицирован</li>
+
+							<li class="hero__item">Маркировка честным знаком</li>
+							<li class="hero__item">Выгодные условия для партнеров</li>
+							<li class="hero__item">Минимальный заказ&nbsp;<strong> от 25 000 ₽</strong></li>
+						</ul>
+
+						<a class="button hero__button" href="catalog.html">
+							<span>Перейти в каталог</span>
+							<span class="icon">
+								<svg class="svg-icon" viewBox="0 0 7 11" width="7" height="11"><use xlink:href="img/sprite.svg#sprite--icon-arrow"></use></svg>
+							</span>
+						</a>
+					</div>
+
+					<div class="hero__slider">
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/1.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Парфюмерная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE JARDIN DE PARIS
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/2.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Туалетная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE BY NIGHT
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/3.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Парфюмерная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE LADY DREAM
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/1.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Парфюмерная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE JARDIN DE PARIS
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/2.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Туалетная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE BY NIGHT
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="hero__slide">
+								<div class="hero__slide-img">
+									<img src="img/hero-slider/3.png" alt="">
+								</div>
+								<div class="hero__slide-content">
+									<span class="hero__slide-caption">
+										Парфюмерная вода
+									</span>
+									<h3 class="hero__slide-name">
+										10TH AVENUE LADY DREAM
+									</h3>
+									<a href="" class="button hero__slide-link">узнать оптовую цену</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- <section class="equipment">
+			<section class="advantages">
 				<div class="container">
-					<div class="equipment__logo">
-						<img src="img/equipment-logo.svg" alt="large logo">
-					</div>
-					<h2 class="equipment__caption">Оборудование</h2>
-					<ul class="equipment__list">
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Крышные вентиляторы</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/roof.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Радиальные вентиляторы</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/radial.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Осевые вентиляторы</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/osevie.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">канальные вентиляторы</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/kanal.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Отопительное&nbsp;оборудование и&nbsp;нагреватели</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/otopitel.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Клапаны воздушного и&nbsp;специального&nbsp;назначения</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/klapan.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Противопожарные клапаны</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/fire.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-						<li class="equipment__item">
-							<a class="equipment__link" href="/">
-								<h3 class="equipment__name">Автоматика и шкафы <br> управления</h3>
-								<div class="equipment__image">
-									<img class="equipment__prev" src="img/equipment/auto.png" alt="equipment preview">
-								</div>
-								<span class="equipment__arrow"></span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<section class="hero hero--atom">
-				<div class="container">
-					<div class="hero__wrapper hero__wrapper--atom">
-						<div class="hero__content hero__content--atom">
-							<p class="hero__caption hero__caption--atom">ООО «МОСКЛИМ» - официально рекомендованный производитель вентиляционного оборудования на объекты АЭС Госкорпорации «Росатом»</p>
-
-							<img class="hero__atom-leefs" src="img/leefs.png" alt="rosatom img">
-						</div>
-
-						<div class="hero__img hero__img--atom">
-							<img src="img/rosatom-form.png" alt="rosatom img">
-							<img class="hero__atom-logo" src="img/rosatom.png" alt="rosatom img">
+					<div class="advantages__header">
+						<span class="advantages__header-value">
+							90%
+						</span>
+						<h2 class="advantages__header-text">
+							наших партнеров
+							выбирают нас для оптовых
+							закупок парфюмерии
+						</h2>
+						<div class="advantages__wrapper">
+							<div class="advantages__img">
+								
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
-			<section class="news">
-				<div class="container">
-					<div class="news__header">
-						<h2 class="news__caption">Новости</h2>
-						<a href="news.html" class="button button--sm">Все новости</a>
-					</div>
-
-					<div class="news__items">
-
-						<a href="article.html" class="news__item">
-							<div class="news__img">
-								<img src="img/news/1.jpg" alt="news preview">
-							</div>
-							<time class="news__date" datetime="2024-09-25">25.09.2024</time>
-							<h2 class="news__item-caption">
-								Важность вентиляции складских помещений
-							</h2>
-						</a>
-
-						<a href="article.html" class="news__item">
-							<div class="news__img">
-								<img src="img/news/2.jpg" alt="news preview">
-							</div>
-							<time class="news__date" datetime="2024-09-25">25.09.2024</time>
-							<h2 class="news__item-caption">
-								Проблема слабой тяги на верхних этажах МКД
-							</h2>
-						</a>
-
-						<a href="article.html" class="news__item">
-							<div class="news__img">
-								<img src="img/news/3.jpg" alt="news preview">
-							</div>
-							<time class="news__date" datetime="2024-09-25">25.09.2024</time>
-							<h2 class="news__item-caption">
-								Зачем нужна регуляция воздуха в вентиляционных каналах
-							</h2>
-						</a>
-
-					</div>
-
-					<img class="news__leefs news__leefs--l" src="img/leefs.png" alt="rosatom img">
-					<img class="news__leefs news__leefs--r" src="img/leefs.png" alt="rosatom img">
-				</div>
-
-				<div class="news__logo">
-					<img src="img/equipment-logo.svg" alt="large logo">
-				</div>
-			</section> -->
-
 		</main>
 
 		<div class="footer">
@@ -462,6 +444,11 @@
 	</div>
 
 	<!-- <script src="js/libs.min.js"></script> -->
+ 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <script src="js/main.min.js"></script>
 <!-- Подключение API Yandex карт -->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>

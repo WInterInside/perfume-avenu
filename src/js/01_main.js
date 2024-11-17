@@ -207,3 +207,27 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Вызов функции создания карты
 	createMap('footer__map', [51.678526, 39.164103]);
 });
+
+$('.hero__slider').slick({
+    slidesToShow: 3, // Базовое значение по умолчанию
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    dots: true,
+    arrows: false,
+    responsive: [
+        {
+            breakpoint: 1300, // Для экранов меньше 1300px
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 900, // Для экранов меньше 900px
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
