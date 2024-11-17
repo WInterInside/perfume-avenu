@@ -133,12 +133,6 @@
 		border-radius: 16px;
 		overflow: hidden;
 		margin-top: 16px;
-
-		@media only screen and (max-width: 900px) {
-			overflow: visible;
-			width: calc(100% + 40px);
-			margin-left: -20px;
-		}
 	}
 
 	&__brands {
