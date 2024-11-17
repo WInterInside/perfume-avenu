@@ -1,0 +1,161 @@
+.partner {
+	padding: 100px 0;
+
+	@media only screen and (max-width: 1700px) {
+		padding: 50px 0;
+	}
+
+	&__header {
+		position: relative;
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		padding-bottom: 42px;
+		margin-bottom: 53px;
+
+		&::before {
+			position: absolute;
+			z-index: 1;
+			content: '';
+			bottom: 1px;
+			width: 60%;
+			height: 1px;
+			background-color: #D8B075;
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 2;
+			content: '';
+			bottom: 0;
+			width: 30%;
+			height: 3px;
+			background-color: #AA804F;
+		}
+
+		&-text {
+			display: inline-block;
+			width: 100%;
+			margin-top: -18px;
+			font-family: Optima;
+			font-size: 42px;
+			font-weight: 400;
+			line-height: 54.6px;
+			letter-spacing: -0.01em;
+			text-align: left;
+			color: #181C1D;
+			text-transform: uppercase;
+		}
+
+		@media (max-width: 900px) {
+			flex-direction: column;
+
+			&::before {
+				width: 100%;
+			}
+
+			&::after {
+				left: 0;
+				width: 50%;
+			}
+
+			&-value {
+				font-size: 150px;
+				font-weight: 400;
+				line-height: 190px;
+			}
+
+			&-text {
+				font-size: 32px;
+				line-height: 45px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		width: 100%;
+		gap: 96px;
+
+		@media only screen and (max-width: 1500px) {
+			gap: 36px;
+			justify-content: space-between;
+		}
+
+		@media only screen and (max-width: 1199px) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	&__item {
+		display: flex;
+		gap: 16px;
+	}
+
+	&__icon {
+		width: 32px;
+		height: 32px;
+	}
+
+	&__text {
+		font-family: Optima;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 31.2px;
+		text-align: left;
+		color: #2E3237DB;
+	}
+}
+
+.partner__form {
+	width: 532px;
+	flex-shrink: 0;
+	background-color: #F3F5F6;
+	padding: 42px 72px;
+	border-radius: 16px;
+	margin-top: -20px;
+
+	@media only screen and (max-width: 1199px) {
+		margin: 0;
+		padding: 20px;
+		width: 100%;
+	}
+
+	&-heading {
+		font-family: Optima;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 27.58px;
+		text-align: center;
+		color: #667884;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+
+	&-caption {
+		display: inline-block;
+		font-family: Onest;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20.4px;
+		text-align: center;
+		color: #181C1D6B;
+		margin-bottom: 32px;
+	}
+}
