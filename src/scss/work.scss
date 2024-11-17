@@ -199,6 +199,15 @@
 		top: 0;
 		right: 0;
 		height: 100%;
+		background-color: #CE4C4C;
+		text-transform: uppercase;
+		color: #ffffff;
+
+		@media (hover: hover) {
+			&:hover {
+				background-color: darken($color: #CE4C4C, $amount: 15%);
+			}
+		}
 
 		@media only screen and (max-width: 1000px) {
 			position: relative;

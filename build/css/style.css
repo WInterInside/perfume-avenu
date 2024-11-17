@@ -715,6 +715,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 17.85px;
+  text-transform: uppercase;
   color: #667884;
   background-color: rgba(102, 120, 132, 0.3215686275);
   padding: 20px 40px;
@@ -5100,6 +5101,14 @@ button::-moz-selection {
   top: 0;
   right: 0;
   height: 100%;
+  background-color: #CE4C4C;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media (hover: hover) {
+  .work__button:hover {
+    background-color: #a12c2c;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .work__button {
