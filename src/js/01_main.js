@@ -220,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Вызов функции создания карты
 	createMap('footer__map', [51.678526, 39.164103]);
+	createMap('contacts__map', [51.678526, 39.164103]);
 });
 
 $('.hero__slider').slick({
