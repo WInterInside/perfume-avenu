@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"PERFUME AVENUE | О компании",
+	"description":"",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+})
+
+<body>
+	<div class="wrapper">
+		@@include('components/page-blocks/_header.html')
+
+		<main class="main main--breadcrumbs">
+			<!-- breadcrumbs -->
+			<div class="container">
+				<section class="breadcrumbs">
+					<ol itemscope="" itemtype="#">
+						<li itemprop="itemListElement" itemscope="" itemtype="#">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name" class="breadcrumb_font_style">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+							<span class="breadcrumb_font_dash">/</span>
+						</li>
+						<li>
+							<span class="breadcrumb_font_style">О компании</span>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<!-- breadcrumbs -->
+
+			<section class="contacts about">
+				<div class="container">
+					<div class="contacts__header">
+						<h2 class="contacts__header-text">
+							О компании
+						</h2>
+					</div>
+
+					<div class="about__wrapper">
+						<div class="contacts__content">
+							<p class="about__text">
+								Мы занимаемся оптовыми продажами парфюмерии с 2017 года и за 7 лет зарекомендовали себя как надежных поставщиков оптовой парфюмерии. 
+								стрибьютором европейских брендов, олицетворяющих философию люксовых ароматов. У нас вы можете приобрести оригинальную, качественную продукцию для дальнейшей реализации.
+							</p>
+							<p class="about__text">
+								За годы работы мы расширили свою деятельность по всей России, обеспечивая клиентов нашей парфюмерией высочайшего качества.
+							</p>
+							<p class="about__text">
+								Мы стремимся к долгосрочному сотрудничеству с нашими партнерами, предлагая им лучшие условия и сервис. Приглашаем к сотрудничеству всех, кто ценит качество, стиль и профессионализм. С нами ваш бизнес будет успешным и процветающим!
+							</p>
+
+							<span class="about__caption">Сертификаты</span>
+							<div class="about__certificates">
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/1.jpg" alt="">
+								</a>
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/2.jpg" alt="">
+								</a>
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/3.jpg" alt="">
+								</a>
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/4.jpg" alt="">
+								</a>
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/5.jpg" alt="">
+								</a>
+								<a target="_blank" class="about__certificate" href="img/certificates/1.jpg">
+									<img src="img/certificates/1.jpg" alt="">
+								</a>								
+							</div>
+						</div>
+
+						<div class="contacts__form">
+							<h3 class="contacts__form-heading">
+								Обратная связь
+							</h3>
+							<span class="contacts__form-caption">
+								Оставьте свои контакты и менеджер свяжется с вами в ближайшее время
+							</span>
+							<form class="form" action="">
+								<input class="form__input" type="text" name="name" required="" placeholder="Ваше имя">
+								<input class="form__input form__input--tel" type="text" name="tel" required="" placeholder="+7 (000) 000 - 00 - 00" maxlength="18">
+								<textarea class="form__input" name="message" placeholder="Текст сообщения..."></textarea>
+
+								<button class="form__button button" type="submit">отправить</button>
+
+								<div class="form__wrapper form__wrapper--agreement">
+									<input class="form__checkbox" id="agreement-doc" type="checkbox" name="agreement" checked required="">
+									<label class="form__label form__label--checkbox" for="agreement-doc">
+										Нажимая на кнопку, вы даете согласие на обработку персональных данных
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		@@include('components/page-blocks/_footer.html')
+
+	</div>
+
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
