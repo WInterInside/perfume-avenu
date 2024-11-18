@@ -1,0 +1,160 @@
+.coop {
+	padding: 0 0 100px 0;
+
+	@media only screen and (max-width: 1700px) {
+		padding: 0 0 50px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__heading {
+		width: 70%;
+		margin-bottom: 42px;
+		text-transform: uppercase;
+		font-family: Optima;
+		font-size: 42px;
+		font-weight: 400;
+		line-height: 54.6px;
+		letter-spacing: -0.01em;
+		text-align: left;
+		color: #181C1D;
+
+		@media only screen and (max-width: 1199px) {
+			width: 100%;
+			text-align: center;
+		}
+
+		@media only screen and (max-width: 900px) {
+			font-size: 32px;
+			line-height: 45px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__img {
+		width: 362px;
+		margin-top: -100px;
+		flex-shrink: 0;
+
+		@media only screen and (max-width: 1400px) {
+			margin: 0 auto;
+		}
+
+		@media only screen and (max-width: 1199px) {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: 64px;
+
+		&--list {
+			gap: unset;
+			flex-grow: 1;
+			justify-content: space-between;
+
+			@media only screen and (max-width: 1400px) {
+				flex-direction: column;
+			}
+		}
+
+		@media only screen and (max-width: 1199px) {
+			flex-direction: column-reverse;
+			gap: 30px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		@media only screen and (max-width: 1199px) {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		@media only screen and (max-width: 900px) {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	&__icon {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-color: #FAF9F3;
+
+		&--bags {
+			padding-top: 30px;
+			padding-left: 5px;
+		}
+	}
+
+	&__text {
+		font-family: Optima;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 31.2px;
+		text-align: left;
+		color: #2E3237DB;
+	}
+}
+
+.coop__form {
+	width: 532px;
+	max-height: 600px;
+	flex-shrink: 0;
+	background-color: #FAF9F3;
+	padding: 42px 60px;
+	border-radius: 16px;
+	margin-top: -20px;
+
+	@media only screen and (max-width: 1199px) {
+		margin: 0;
+		padding: 20px;
+		width: 100%;
+	}
+
+	&-heading {
+		font-family: Optima;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 27.58px;
+		text-align: center;
+		color: #AA804F;
+		text-transform: uppercase;
+		margin-bottom: 32px;
+	}
+
+	&-caption {
+		display: inline-block;
+		font-family: Onest;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20.4px;
+		text-align: center;
+		color: #181C1D6B;
+		margin-bottom: 32px;
+	}
+
+	.form__button {
+		margin-top: 16px;
+	}
+}
