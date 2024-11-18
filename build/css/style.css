@@ -2680,6 +2680,123 @@ body.is-scrolled .main {
     color: #ffffff;
   }
 }
+.map {
+  padding: 100px 0;
+}
+@media (max-width: 1700px) {
+  .map {
+    padding: 50px 0;
+  }
+}
+.map__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 42px;
+  margin-bottom: 53px;
+}
+.map__header::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  bottom: 1px;
+  width: 60%;
+  height: 1px;
+  background-color: #D8B075;
+}
+.map__header::after {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  bottom: 0;
+  width: 30%;
+  height: 3px;
+  background-color: #AA804F;
+}
+.map__header-text {
+  display: inline-block;
+  width: 70%;
+  font-family: Optima;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 54.6px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #181C1D;
+  text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  .map__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .map__header::before {
+    width: 100%;
+  }
+  .map__header::after {
+    left: 0;
+    width: 50%;
+  }
+  .map__header-value {
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 190px;
+  }
+  .map__header-text {
+    font-size: 32px;
+    line-height: 45px;
+    width: 100%;
+    text-align: center;
+  }
+}
+.map__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1352px;
+  height: 753px;
+}
+.map__map {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.map__map img {
+  width: 1352px;
+  height: 753px;
+}
+.map__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background-color: rgba(170, 128, 79, 0.2274509804);
+}
+.map__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-family: Onest;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.95px;
+  text-align: left;
+  color: rgba(24, 28, 29, 0.6392156863);
+  padding: 8px;
+  background-color: red;
+}
 .news {
   position: relative;
   padding: 46px 0 166px 0;
