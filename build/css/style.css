@@ -1088,6 +1088,9 @@
   list-style-type: none;
   padding: 0;
 }
+.catalog__list--news {
+  grid-template-columns: repeat(4, minmax(auto, 330px));
+}
 @media (max-width: 1400px) {
   .catalog__list {
     grid-template-columns: repeat(2, minmax(auto, 330px));
