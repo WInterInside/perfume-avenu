@@ -124,6 +124,12 @@
 			display: flex;
 			gap: 12px;
 			align-items: center;
+
+			&.is-current {
+				.catalog__menu-brand {
+					color: #AA804F;
+				}				
+			}
 		}
 
 		&-icon {

@@ -41,7 +41,11 @@ const handleScroll = () => {
 // }
 
 navToggle.addEventListener('click', toggleNav);
-filtersToggle.addEventListener('click', toggleFilters);
+
+if (filtersToggle) {
+	filtersToggle.addEventListener('click', toggleFilters);
+}
+
 window.addEventListener("scroll", handleScroll);
 
 // // Add event listener to document to close nav when clicking outside

@@ -925,6 +925,9 @@
       -ms-flex-align: center;
           align-items: center;
 }
+.catalog__menu-item.is-current .catalog__menu-brand {
+  color: #AA804F;
+}
 .catalog__menu-icon {
   width: 16px;
   height: 16px;
