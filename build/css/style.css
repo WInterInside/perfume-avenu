@@ -2698,7 +2698,6 @@ body.is-scrolled .main {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 42px;
-  margin-bottom: 53px;
 }
 .map__header::before {
   position: absolute;
@@ -2756,21 +2755,232 @@ body.is-scrolled .main {
     text-align: center;
   }
 }
-.map__content {
+.map__desktop {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1352px;
   height: 753px;
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+          transform: translateX(15px);
+}
+@media only screen and (max-width: 1300px) {
+  .map__desktop {
+    display: none;
+  }
+}
+.map__mobile {
+  padding: 30px 0;
+  display: none;
+}
+@media only screen and (max-width: 1300px) {
+  .map__mobile {
+    display: block;
+  }
 }
 .map__map {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  position: relative;
 }
 .map__map img {
   width: 1352px;
   height: 753px;
+}
+.map__marker {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(206, 76, 76, 0.3137254902);
+  opacity: 0.6;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .map__marker:hover {
+    opacity: 1;
+  }
+  .map__marker:hover .map__marker-label {
+    opacity: 1;
+  }
+}
+.map__marker::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+.map__marker::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(206, 76, 76, 0.6392156863);
+}
+.map__marker--moskva {
+  width: 64px;
+  height: 64px;
+  left: 150px;
+  top: 333px;
+}
+.map__marker--moskva::before {
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 16px;
+}
+.map__marker--moskva::after {
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+}
+.map__marker--rostov {
+  left: 83px;
+  top: 470px;
+}
+.map__marker--sochi {
+  left: 5px;
+  top: 520px;
+}
+.map__marker--astrakhan {
+  left: 125px;
+  top: 552px;
+}
+.map__marker--stavropol {
+  left: 60px;
+  top: 530px;
+}
+.map__marker--krasnodar {
+  left: 20px;
+  top: 480px;
+}
+.map__marker--simferopol {
+  left: -15px;
+  top: 450px;
+}
+.map__marker--kaliningrad {
+  left: 45px;
+  top: 215px;
+}
+.map__marker--cherepovets {
+  left: 230px;
+  top: 310px;
+}
+.map__marker--spb {
+  left: 175px;
+  top: 235px;
+}
+.map__marker--tambov {
+  left: 143px;
+  top: 413px;
+}
+.map__marker--penza {
+  left: 173px;
+  top: 433px;
+}
+.map__marker--ryazan {
+  left: 158px;
+  top: 383px;
+}
+.map__marker--irkutsk {
+  left: 797px;
+  top: 645px;
+}
+.map__marker--barnaul {
+  left: 567px;
+  top: 625px;
+}
+.map__marker--abakan {
+  left: 630px;
+  top: 635px;
+}
+.map__marker--krasnoyarsk {
+  left: 670px;
+  top: 590px;
+}
+.map__marker--donetsk {
+  left: 15px;
+  top: 420px;
+}
+.map__marker--mariupol {
+  left: 35px;
+  top: 450px;
+}
+.map__marker--golovka {
+  left: 50px;
+  top: 430px;
+}
+.map__marker--lugansk {
+  left: 50px;
+  top: 400px;
+}
+.map__marker--belgorod {
+  left: 80px;
+  top: 410px;
+}
+.map__marker--lipeck {
+  left: 120px;
+  top: 380px;
+}
+.map__marker--kirov {
+  left: 273px;
+  top: 400px;
+}
+.map__marker--izhevsk {
+  left: 290px;
+  top: 430px;
+}
+.map__marker--volgograd {
+  left: 133px;
+  top: 495px;
+}
+.map__marker--samara {
+  left: 225px;
+  top: 475px;
+}
+.map__marker--voronezh {
+  left: 113px;
+  top: 425px;
+}
+.map__marker-label {
+  pointer-events: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 10;
+  top: -18px;
+  left: -10px;
+  opacity: 0;
+  font-family: Onest;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  text-align: center;
+  color: rgba(24, 28, 29, 0.6392156863);
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(24, 28, 29, 0.6392156863);
+  border-radius: 8px;
 }
 .map__list {
   list-style: none;
@@ -2779,23 +2989,23 @@ body.is-scrolled .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  background-color: rgba(170, 128, 79, 0.2274509804);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: scroll;
 }
 .map__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(24, 28, 29, 0.6392156863);
+  padding: 4px 8px;
+  border-radius: 8px;
   font-family: Onest;
   font-size: 18px;
   font-weight: 500;
   line-height: 22.95px;
   text-align: left;
   color: rgba(24, 28, 29, 0.6392156863);
-  padding: 8px;
-  background-color: red;
+  white-space: nowrap;
 }
 .news {
   position: relative;

@@ -11,7 +11,6 @@
 		gap: 32px;
 		align-items: center;
 		padding-bottom: 42px;
-		margin-bottom: 53px;
 
 		&::before {
 			position: absolute;
@@ -73,19 +72,233 @@
 		}
 	}
 
-	&__content {
+	&__desktop {
 		position: relative;
 		display: flex;
 		width: 1352px;
 		height: 753px;
+		transform: translateX(15px);
+
+		@media only screen and (max-width: 1300px) {
+			display: none;
+		}
+	}
+
+	&__mobile {
+		padding: 30px 0;
+		display: none;
+
+		@media only screen and (max-width: 1300px) {
+			display: block;
+		}
 	}
 
 	&__map {
 		flex-shrink: 0;
+		position: relative;
 
 		& img {
 			width: 1352px;
 			height: 753px;
+		}
+	}
+
+	&__marker {
+		position: absolute;
+		display: flex;
+		top: 0;
+		left: 0;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background-color: #ce4c4c50;
+		opacity: .6;
+		// transition: opacity .3s;
+		cursor: pointer;
+
+		@media (hover: hover) {
+			&:hover {
+				opacity: 1;
+
+				.map__marker-label {
+					opacity: 1;
+				}
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50% - 6px);
+			left: calc(50% - 6px);
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: #fff;
+			z-index: 2;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: calc(50% - 15px);
+			left: calc(50% - 15px);
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #CE4C4CA3;
+		}
+
+		&--moskva {
+			width: 64px;
+			height: 64px;
+			left: 150px;
+			top: 333px;
+
+			&::before {
+				top: calc(50% - 8px);
+				left: calc(50% - 8px);
+				width: 16px;
+				height: 16px;
+			}
+
+			&::after {
+				top: calc(50% - 20px);
+				left: calc(50% - 20px);
+				width: 40px;
+				height: 40px;
+			}
+		}
+		&--rostov {
+			left: 83px;
+			top: 470px;
+		}
+		&--sochi {
+			left: 5px;
+			top: 520px;
+		}
+		&--astrakhan {
+			left: 125px;
+			top: 552px;
+		}
+		&--stavropol {
+			left: 60px;
+			top: 530px;
+		}
+		&--krasnodar {
+			left: 20px;
+			top: 480px;
+		}
+		&--simferopol {
+			left: -15px;
+			top: 450px;
+		}
+		&--kaliningrad {
+			left: 45px;
+			top: 215px;
+		}
+		&--cherepovets {
+			left: 230px;
+			top: 310px;
+		}
+		&--spb {
+			left: 175px;
+			top: 235px;
+		}
+		&--tambov {
+			left: 143px;
+			top: 413px;
+		}
+		&--penza {
+			left: 173px;
+			top: 433px;
+		}
+		&--ryazan {
+			left: 158px;
+			top: 383px;
+		}
+		&--irkutsk {
+			left: 797px;
+			top: 645px;
+		}
+		&--barnaul {
+			left: 567px;
+			top: 625px;
+		}
+		&--abakan {
+			left: 630px;
+			top: 635px;
+		}
+		&--krasnoyarsk {
+			left: 670px;
+			top: 590px;
+		}
+		&--donetsk {
+			left: 15px;
+			top: 420px;
+		}
+		&--mariupol {
+			left: 35px;
+			top: 450px;
+		}
+		&--golovka {
+			left: 50px;			
+			top: 430px;
+		}
+		&--lugansk {
+			left: 50px;
+			top: 400px;
+		}
+		&--belgorod {
+			left: 80px;
+			top: 410px;
+		}
+		&--lipeck {
+			left: 120px;
+			top: 380px;	
+		}
+		&--kirov {
+			left: 273px;
+			top: 400px;
+		}
+		&--izhevsk {
+			left: 290px;
+			top: 430px;
+		}
+		&--volgograd {
+			left: 133px;
+			top: 495px;
+		}
+		&--samara {
+			left: 225px;
+			top: 475px;
+		}
+		&--voronezh {
+			left: 113px;
+			top: 425px;
+		}
+		
+		&-label {
+			pointer-events: none;
+			position: absolute;
+			white-space: nowrap;
+			z-index: 10;
+			top: -18px;
+			left: -10px;
+			opacity: 0;
+			font-family: Onest;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 23px;
+			text-align: center;
+			color: #181C1DA3;
+			padding: 0 8px;
+			display: flex;
+			flex-wrap: nowrap;
+			background-color: #FFFFFF;
+			border: 1px solid #181C1DA3;
+			border-radius: 8px;
+			// transition: opacity .3s;
 		}
 	}
 
@@ -94,24 +307,22 @@
 		padding: 0;
 		margin: 0;
 		display: flex;
-		position: absolute;
-		// inset: 0;
-		background-color: #aa804f3a;
+		flex-wrap: nowrap;
+		gap: 8px;
+		overflow-x: scroll;
 	}
 
 	&__item {
-		position: absolute;
-		top: 0;
-		left: 0;
-		flex-shrink: 0;
+		background-color: #FFFFFF;
+		border: 1px solid #181C1DA3;
+		padding: 4px 8px;
+		border-radius: 8px;
 		font-family: Onest;
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 22.95px;
 		text-align: left;
 		color: #181C1DA3;
-		padding: 8px;
-		// background-color: #FFFFFF;
-		background-color: red;
+		white-space: nowrap;
 	}
 }
