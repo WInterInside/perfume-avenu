@@ -304,11 +304,11 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 46px;
-		height: 46px;
-		border-radius: 50%;
+		height: 40px;
+		border-radius: 20%;
 		background-color: #D8B075;
 		flex-shrink: 0;
-		padding: 8px;
+		padding: 4px 8px;
 		z-index: 100;
 		cursor: pointer;
 		transition: background-color .3s;
@@ -456,20 +456,6 @@
 			transition: transform .3s;
 		}
 	}
-}
-
-.scrollable-nav-container {
-	display: contents;
-	// @media only screen and (max-width: 769px) {
-	// 	height: calc(100vh - 100px);
-	// 	overflow-y: scroll;
-	// 	padding-bottom: 50px;
-
-	// 	&::-webkit-scrollbar,
-	// 	&::-webkit-scrollbar-thumb {
-	// 		display: none;
-	// 	}
-	// }
 }
 
 body.is-nav-open {

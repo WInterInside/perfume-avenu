@@ -231,3 +231,19 @@ button::-moz-selection {
 	text-align: left;
 	color: #2E3237;
 }
+
+.scrollable-container {
+	display: contents;
+
+	@media only screen and (max-width: 900px) {
+		display: block;
+		height: calc(100vh - 100px);
+		overflow-y: scroll;
+		padding-bottom: 50px;
+
+		&::-webkit-scrollbar,
+		&::-webkit-scrollbar-thumb {
+			display: none;
+		}
+	}
+}

@@ -1,5 +1,6 @@
 const body = document.body;
 const navToggle = document.querySelector('[data-element~="navToggle"]');
+const filtersToggle = document.querySelector('[data-element~="filtersToggle"]');
 
 // const navMore = document.querySelector('.header__nav-more');
 // const orderBtn = document.querySelector('[data-element="orderBtn"]');
@@ -11,10 +12,19 @@ const navToggle = document.querySelector('[data-element~="navToggle"]');
 const toggleNav = () => {
 	if (!body.classList.contains('is-nav-open')) {
 		body.classList.add('is-nav-open');
+		body.classList.remove('is-filters-open');
 	} else {
 		body.classList.remove('is-nav-open');
 	}
 };
+
+const toggleFilters = () => {
+	if (!body.classList.contains('is-filters-open')) {
+		body.classList.add('is-filters-open');
+	} else {
+		body.classList.remove('is-filters-open');
+	}
+}
 
 const handleScroll = () => {
 	(window.scrollY > 0) ?  body.classList.add('is-scrolled') : body.classList.remove('is-scrolled');
@@ -31,29 +41,29 @@ const handleScroll = () => {
 // }
 
 navToggle.addEventListener('click', toggleNav);
-// navMore.addEventListener('click', toggleNav);
+filtersToggle.addEventListener('click', toggleFilters);
 window.addEventListener("scroll", handleScroll);
 
 // // Add event listener to document to close nav when clicking outside
-// document.addEventListener('click', (e) => {
-// 	if (!navToggle.contains(e.target) && !navMore.contains(e.target) && !e.target.closest('.header__nav-more')) {
-// 		body.classList.remove('is-nav-open');
-// 	}
-// });
+document.addEventListener('click', (e) => {
+	if (!navToggle.contains(e.target)) {
+		body.classList.remove('is-nav-open');
+	}
+});
 
 // // прокрутка статьи
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-// 	anchor.addEventListener('click', function(e) {
-// 		e.preventDefault();
-// 		let destination = document.querySelector(this.getAttribute('href'));
-// 		const header = document.querySelector('[data-element="header"]');
-// 		if (destination) {
-// 			let headerHeight = (header.offsetHeight + 30);
-// 			let topOfDestination = destination.getBoundingClientRect().top + window.scrollY - headerHeight;
-// 			window.scrollTo({ top: topOfDestination, behavior: "smooth" });
-// 		}
-// 	});
-// });
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function(e) {
+		e.preventDefault();
+		let destination = document.querySelector(this.getAttribute('href'));
+		const header = document.querySelector('[data-element="header"]');
+		if (destination) {
+			let headerHeight = (header.offsetHeight + 30);
+			let topOfDestination = destination.getBoundingClientRect().top + window.scrollY - headerHeight;
+			window.scrollTo({ top: topOfDestination, behavior: "smooth" });
+		}
+	});
+});
 
 // if (orderBtn) {
 // 	orderBtn.addEventListener('click', () => {
