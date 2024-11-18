@@ -528,6 +528,10 @@ body.is-scrolled {
 	.main {
 		padding-top: 120px;
 
+		&--breadcrumbs {
+			padding-top: 150px;
+		}
+
 		@media only screen and (max-width: 1000px) {
 			padding-top: 44px;
 		}

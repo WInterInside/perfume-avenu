@@ -1,13 +1,25 @@
 .breadcrumbs {
 	margin-top: 20px;
-	@media (max-width: 769px) {
+
+	@media (max-width: 1000px) {
 		display: none;
 	}
 
 	& a {
 		font-size: 14px;
 		line-height: 20px;
-		color: #214250;
+		color: #667884;
+	}
+
+	.breadcrumb_font_style {
+		padding: 6px;
+		border-radius: 4px;
+		background-color: #9B9B9B29;
+		margin-right: 10px;
+	}
+
+	.breadcrumb_font_dash {
+		color: #2E323729;
 	}
 
 	& ol {
@@ -20,11 +32,25 @@
 
 		font-size: 14px;
 		line-height: 20px;
-		color: #214250;
+		color: #667884;
 	}
 
 	& ol li:not(:last-child) {
-		margin-right: 17px;
+		margin-right: 10px;
+	}
+
+	& ol li:last-child {
+		.breadcrumb_font_style {
+			padding: 6px;
+			border-radius: 4px;
+			background-color: #9B9B9B29;
+			margin-right: 10px;
+			color: #2E323752;
+		}
+	}
+
+	.breadcrumb_font_style {
+		
 	}
 
 	.span_m_l_20 {
