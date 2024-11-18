@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+	"lang":"ru",
+	"title":"PERFUME AVENUE | О компании",
+	"description":"",
+	"keywords":"",
+	"favicon":"img/favicons/favicon",
+})
+
+<body>
+	<div class="wrapper">
+		@@include('components/page-blocks/_header.html')
+
+		<main class="main main--breadcrumbs">
+			<!-- breadcrumbs -->
+			<div class="container">
+				<section class="breadcrumbs">
+					<ol itemscope="" itemtype="#">
+						<li itemprop="itemListElement" itemscope="" itemtype="#">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name" class="breadcrumb_font_style">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+							<span class="breadcrumb_font_dash">/</span>
+						</li>
+						<li>
+							<span class="breadcrumb_font_style">Доставка и оплата</span>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<!-- breadcrumbs -->
+
+			<section class="contacts about">
+				<div class="container">
+					<div class="contacts__header">
+						<h2 class="contacts__header-text">
+							Доставка и оплата
+						</h2>
+					</div>
+
+					<div class="payment__wrapper">
+						<div class="payment__block">
+							<h3 class="payment__caption">
+								Способы оплаты:
+							</h3>
+							<ul class="payment__list">
+								<li class="payment__item">
+									<span class="payment__item-text">Безналичная</span>
+								</li>
+								<li class="payment__item">
+									<span class="payment__item-text">По расчётному счёту:</span>
+									<ul class="payment__data">
+										<li class="payment__data-value">
+											ООО «ТЭК»
+										</li>
+										<li class="payment__data-value">
+											ОГРН 1203600003782
+										</li>
+										<li class="payment__data-value">
+											ИНН/КПП 3662282433 / 366601001
+										</li>
+										<li class="payment__data-value">
+											Банк: АО «АЛЬФА-БАНК»
+										</li>
+										<li class="payment__data-value">
+											Р/С: 40702810602940009687
+										</li>
+										<li class="payment__data-value">
+											К/С: 30101810200000000593
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<div class="payment__block">
+							<h3 class="payment__caption">
+								Доставку осуществляем транспортными компаниями:
+							</h3>
+							<div class="payment__company">
+								<div class="payment__company-item">
+									<img src="img/payment/dl.svg" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/pek.svg" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/mt.png" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/kit.svg" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/bs.png" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/cap.png" alt="">
+								</div>
+								<div class="payment__company-item">
+									<img src="img/payment/rc.png" alt="">
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		@@include('components/page-blocks/_footer.html')
+
+	</div>
+
+	@@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

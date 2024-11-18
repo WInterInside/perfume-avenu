@@ -5,6 +5,15 @@
 		padding: 50px 0;
 	}
 
+	&--page {
+		padding: 50px 0 100px 0;
+
+		@media (max-width: 1700px) {
+			padding: 50px 0;
+		}
+	
+	}
+
 	&__header {
 		position: relative;
 		display: flex;
@@ -310,6 +319,7 @@
 		flex-wrap: nowrap;
 		gap: 8px;
 		overflow-x: scroll;
+		padding-bottom: 10px;
 	}
 
 	&__item {
