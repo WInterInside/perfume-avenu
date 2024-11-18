@@ -29,7 +29,7 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 
-	<title>PERFUME AVENUE | Карта сайта</title>
+	<title>PERFUME AVENUE | Ошибка 404</title>
 </head>
 
 
@@ -147,25 +147,57 @@
 
 
 
-		<main class="main">
-			<section class="sitemap">
+		<main class="main main--breadcrumbs">
+			<!-- breadcrumbs -->
+			<div class="container">
+				<section class="breadcrumbs">
+					<ol itemscope="" itemtype="#">
+						<li itemprop="itemListElement" itemscope="" itemtype="#">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name" class="breadcrumb_font_style">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+							<span class="breadcrumb_font_dash">/</span>
+						</li>
+						<li>
+							<span class="breadcrumb_font_style">Ошибка 404</span>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<!-- breadcrumbs -->
+
+			<section class="service">
 				<div class="container">
-					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация</a></li>
-						<li><a href="catalog.html">Каталог</a></li>
-						<li><a href="catalog-card.html">Карточка товара - when it's done</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-						<li><a href="about.html">О кампании</a></li>
-						<li><a href="partners.html">Партнерам</a></li>
-						<li><a href="buy.html">Где купить</a></li>
-						<li><a href="payment.html">Доставка и оплата</a></li>
-						<li><a href="success.html">Заявка</a></li>
-						<li><a href="404.html">404</a></li>
-					</ul>
+
+					<div class="service__wrapper service__wrapper--revers">
+						<div class="service__content">
+							<div class="service__header service__header--inner">
+								<h2 class="service__header-text">
+									страница не найдена
+								</h2>
+							</div>
+		
+							<p class="service__text">
+								К сожалению, страница, которую вы запросили, не найдена. 
+								Вы можете перейти на <a href="/">главную страницу</a> главную страницу
+								или воспользоваться <a href="catalog.html">каталогом товаров</a>
+							</p>
+
+							<a href="/" class="service__button button">
+								<span class="service__button-icon">
+									<svg class="svg-icon" viewBox="0 0 12 19" width="12" height="16"><use xlink:href="img/sprite.svg#sprite--service-arrwo"></use></svg>
+								</span>
+								вернуться на главную
+							</a>
+						</div>
+
+						<div class="service__img service__img--404">
+							<img src="img/404.png" alt="">
+						</div>
+					</div>
 				</div>
 			</section>
-
 		</main>
 
 		<div class="footer">

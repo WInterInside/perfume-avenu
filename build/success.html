@@ -29,7 +29,7 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 
-	<title>PERFUME AVENUE | Карта сайта</title>
+	<title>PERFUME AVENUE | Ваша заявка отправлена</title>
 </head>
 
 
@@ -147,25 +147,78 @@
 
 
 
-		<main class="main">
-			<section class="sitemap">
+		<main class="main main--breadcrumbs">
+			<!-- breadcrumbs -->
+			<div class="container">
+				<section class="breadcrumbs">
+					<ol itemscope="" itemtype="#">
+						<li itemprop="itemListElement" itemscope="" itemtype="#">
+							<a itemprop="item" href="index.html">
+								<span itemprop="name" class="breadcrumb_font_style">Главная</span>
+							</a>
+							<meta itemprop="position" content="1">
+							<span class="breadcrumb_font_dash">/</span>
+						</li>
+						<li>
+							<span class="breadcrumb_font_style">Ваша заявка отправлена</span>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<!-- breadcrumbs -->
+
+			<section class="service">
 				<div class="container">
-					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="registration.html">Регистрация</a></li>
-						<li><a href="catalog.html">Каталог</a></li>
-						<li><a href="catalog-card.html">Карточка товара - when it's done</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-						<li><a href="about.html">О кампании</a></li>
-						<li><a href="partners.html">Партнерам</a></li>
-						<li><a href="buy.html">Где купить</a></li>
-						<li><a href="payment.html">Доставка и оплата</a></li>
-						<li><a href="success.html">Заявка</a></li>
-						<li><a href="404.html">404</a></li>
-					</ul>
+					<div class="service__header">
+						<h2 class="service__header-text">
+							Ваша заявка отправлена
+						</h2>
+					</div>
+
+					<div class="service__wrapper">
+						<div class="service__content">
+							<p class="service__text">
+								Ваша заявка уже доставляется на электронную почту нашего сайта, и мы при первой же возможности обязательно на нее ответим
+							</p>
+							<p class="service__text">
+								Если ответа на Вашу заявку нет в течение 24 часов, пожалуйста, обратитесь по номеру:
+							</p>
+
+							<div class="header__contacts">
+								<div class="header__tel">
+									<div class="header__tel-list">
+										<a class="header__tel-link" href="tel:+79009456470">+7 (900) 945-64-70</a>
+										<a class="header__tel-link" href="tel:+79066786852">+7 (906) 678-68-52</a>
+									</div>
+			
+									<div class="icons">
+										<a class="icons__link" target="_blank" href="">
+											<svg class="svg-icon" viewBox="0 0 13 11" width="13" height="11"><use xlink:href="img/sprite.svg#sprite--tg"></use></svg>
+										</a>
+										<a class="icons__link" target="_blank" href="">
+											<svg class="svg-icon" viewBox="0 0 17 17" width="17" height="17"><use xlink:href="img/sprite.svg#sprite--wa"></use></svg>
+										</a>
+										<a class="icons__link" target="_blank" href="">
+											<svg class="svg-icon" viewBox="0 0 15 16" width="15" height="16"><use xlink:href="img/sprite.svg#sprite--arrow-ring"></use></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<a href="/" class="service__button button">
+								<span class="service__button-icon">
+									<svg class="svg-icon" viewBox="0 0 12 19" width="12" height="16"><use xlink:href="img/sprite.svg#sprite--service-arrwo"></use></svg>
+								</span>
+								вернуться на главную
+							</a>
+						</div>
+
+						<div class="service__img">
+							<img src="img/success.png" alt="">
+						</div>
+					</div>
 				</div>
 			</section>
-
 		</main>
 
 		<div class="footer">
