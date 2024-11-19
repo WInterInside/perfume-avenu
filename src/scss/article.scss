@@ -248,6 +248,15 @@ article {
 		gap: 16px;
 		margin-bottom: 52px;
 		margin-top: 24px;
+
+		& li {
+			font-family: Onest;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 25.2px;
+			text-align: left;
+			color: #181C1DA3;
+		}
 	}
 
 	& img {

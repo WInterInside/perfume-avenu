@@ -593,6 +593,14 @@ article ul, article ol {
   margin-bottom: 52px;
   margin-top: 24px;
 }
+article ul li, article ol li {
+  font-family: Onest;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.2px;
+  text-align: left;
+  color: rgba(24, 28, 29, 0.6392156863);
+}
 article img {
   width: 100%;
   margin-top: 20px;
