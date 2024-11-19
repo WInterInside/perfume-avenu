@@ -120,7 +120,7 @@
 			&.is-current {
 				.catalog__menu-brand {
 					color: #AA804F;
-				}				
+				}
 			}
 		}
 
@@ -195,7 +195,7 @@
 
 		@media (max-width: 500px) {
 			grid-template-columns: repeat(1, minmax(auto, auto));
-		}		
+		}
 
 		&--news {
 			grid-template-columns: repeat(4, minmax(auto, 330px));
