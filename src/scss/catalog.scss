@@ -181,10 +181,6 @@
 		list-style-type: none;
 		padding: 0;
 
-		&--news {
-			grid-template-columns: repeat(4, minmax(auto, 330px));
-		}
-
 		@media (max-width: 1400px) {
 			grid-template-columns: repeat(2, minmax(auto, 330px));
 		}
@@ -199,6 +195,22 @@
 
 		@media (max-width: 500px) {
 			grid-template-columns: repeat(1, minmax(auto, auto));
+		}		
+
+		&--news {
+			grid-template-columns: repeat(4, minmax(auto, 330px));
+
+			@media (max-width: 1300px) {
+				grid-template-columns: repeat(3, minmax(auto, auto));
+			}
+
+			@media (max-width: 900px) {
+				grid-template-columns: repeat(2, minmax(auto, auto));
+			}
+
+			@media (max-width: 650px) {
+				grid-template-columns: repeat(1, minmax(auto, auto));
+			}
 		}
 	}
 
@@ -259,6 +271,60 @@
 				}
 			}
 		}
+
+		&-news-caption {
+			font-family: Optima;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 24px;
+			text-align: left;
+			color: #2E3237;
+		}
+
+		&-news-text {
+			font-family: Onest;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22.4px;
+			text-align: left;
+			color: #181C1D52;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3; /* Здесь указываем количество строк */
+			overflow: hidden;
+			text-overflow: ellipsis; /* Добавляет многоточие в конце */
+		}
+
+		&-news-button {
+			font-family: Onest;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22.4px;
+			text-align: left;
+			text-decoration-line: underline;
+			color: #AA804F;
+			margin-top: auto;
+		}
+
+		&-news-link {
+			.catalog__item-img {
+				margin-top: 0;
+				& img {
+					transition: transform .3s;
+				}
+			}
+			@media (hover: hover) {
+				&:hover {
+					background-color: darken($color: #EFF0F252, $amount: 15%);
+					.catalog__item-img {
+						& img {
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	.form {

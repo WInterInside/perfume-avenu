@@ -5,8 +5,13 @@
 	margin-top: 30px;
 	gap: 8px;
 
+	@media (max-width: 650px) {
+		justify-content: center;
+	}
+
 	&__number {
 		display: flex;
+		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
@@ -34,9 +39,8 @@
 		}
 
 		@media (max-width: 399px) {
-			padding: 5px;
-			min-width: 28px;
-			height: 33px;
+			width: 30px;
+			height: 30px;
 		}
 	}
 
