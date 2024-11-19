@@ -110,47 +110,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // 	}
 // }
 
-// class Tabs {
-// 	setTabs = (tabs, id) => {
-// 		this.clearTabs(tabs);
+class Tabs {
+	setTabs = (tabs, id) => {
+		this.clearTabs(tabs);
 
-// 		tabs.querySelectorAll('[data-tab="' + id + '"]').forEach((el) => {
-// 			el.classList.add('is-active');
-// 		});
-// 	}
+		tabs.querySelectorAll('[data-tab="' + id + '"]').forEach((el) => {
+			el.classList.add('is-active');
+		});
+	}
 
-// 	clearTabs = (tabs) =>{
-// 		let tabsBtn = tabs.querySelectorAll('[data-elements ~= "tabsBtn"]'),
-// 			tabsItems = tabs.querySelectorAll('[data-elements ~= "tabsItem"]');
+	clearTabs = (tabs) =>{
+		let tabsBtn = tabs.querySelectorAll('[data-elements ~= "tabsBtn"]'),
+			tabsItems = tabs.querySelectorAll('[data-elements ~= "tabsItem"]');
 
-// 		tabsBtn.forEach((el) => {
-// 			el.classList.remove('is-active')
-// 		});
+		tabsBtn.forEach((el) => {
+			el.classList.remove('is-active')
+		});
 
-// 		tabsItems.forEach((el) => {
-// 			el.classList.remove('is-active')
-// 		});
-// 	}
-// }
+		tabsItems.forEach((el) => {
+			el.classList.remove('is-active')
+		});
+	}
+}
 
-// document.addEventListener('click', (e) => {
-// 	let el = e.target.closest('[data-elements~="tabsBtn"]');
-// 	if (el) {
-// 		let id = el.dataset.tab;
-// 		let tabs = el.closest('[data-elements~="tabs"]');
-// 		let tabContents = tabs.querySelectorAll('[data-tab]');
+document.addEventListener('click', (e) => {
+	let el = e.target.closest('[data-elements~="tabsBtn"]');
+	if (el) {
+		let id = el.dataset.tab;
+		let tabs = el.closest('[data-elements~="tabs"]');
+		let tabContents = tabs.querySelectorAll('[data-tab]');
 
-// 		tabContents.forEach((item) => {
-// 			item.classList.toggle('is-active', id === item.dataset.tab);
-// 		});
+		tabContents.forEach((item) => {
+			item.classList.toggle('is-active', id === item.dataset.tab);
+		});
 
-// 		// Example method to set the active tabs
-// 		// function setTabs(tabsContainer, activeTabId) {
-// 		// 	console.log(`Setting tabs for ${activeTabId} in ${tabsContainer}`);
-// 		// }
-// 		// setTabs(tabs, id);
-// 	}
-// });
+		// Example method to set the active tabs
+		// function setTabs(tabsContainer, activeTabId) {
+		// 	console.log(`Setting tabs for ${activeTabId} in ${tabsContainer}`);
+		// }
+		// setTabs(tabs, id);
+	}
+});
 
 
 [].forEach.call( document.querySelectorAll('.form__input--tel'), function(input) {
@@ -224,25 +224,59 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $('.hero__slider').slick({
-    slidesToShow: 3, // Базовое значение по умолчанию
-    slidesToScroll: 1,
-    autoplaySpeed: 3000,
-    dots: true,
-    arrows: false,
-    responsive: [
-        {
-            breakpoint: 1300, // Для экранов меньше 1300px
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 900, // Для экранов меньше 900px
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
+	slidesToShow: 3, // Базовое значение по умолчанию
+	slidesToScroll: 1,
+	autoplaySpeed: 3000,
+	dots: true,
+	arrows: false,
+	responsive: [
+		{
+			breakpoint: 1300, // Для экранов меньше 1300px
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 900, // Для экранов меньше 900px
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	]
+});
+
+$('.catalog-card__slider-main').slick({
+	slidesToScroll: 1,
+	slidesToShow: 1,
+	arrows: false,
+	dots: false,
+	fade: true,
+	cssEase: 'linear',
+	asNavFor: '.slider-nav-thumbnails',
+});
+
+$('.slider-nav-thumbnails').slick({
+	autoplay: true,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	asNavFor: '.catalog-card__slider-main',
+	dots: false,
+	arrows:false,
+	focusOnSelect: true,
+	variableWidth: true
+});
+
+// Remove active class from all thumbnail slides
+$('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+
+// Set active class to first thumbnail slides
+$('.slider-nav-thumbnails .slick-slide').eq(0).addClass('slick-active');
+
+// On before slide change match active thumbnail to current slide
+$('.catalog-card__slider-main').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+	var mySlideNumber = nextSlide;
+	$('.slider-nav-thumbnails .slick-slide').removeClass('slick-active');
+	$('.slider-nav-thumbnails .slick-slide').eq(mySlideNumber).addClass('slick-active');
 });
