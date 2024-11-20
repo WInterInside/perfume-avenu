@@ -50,7 +50,7 @@
 		&-text {
 			display: inline-block;
 			width: 50%;
-			margin-top: -18px;
+			// margin-top: -18px;
 			font-family: Optima;
 			font-size: 42px;
 			font-weight: 400;
@@ -62,8 +62,10 @@
 		}
 
 		@media (max-width: 900px) {
-			flex-direction: column;
-			
+			gap: 0;
+			padding-bottom: 22px;
+			margin-bottom: 33px;
+
 			&::before {
 				width: 100%;
 			}
@@ -74,14 +76,14 @@
 			}
 	
 			&-value {
-				font-size: 150px;
+				font-size: 60px;
 				font-weight: 400;
-				line-height: 190px;
+				line-height: 80px;
 			}
 	
 			&-text {
-				font-size: 32px;
-				line-height: 45px;
+				font-size: 18px;
+				line-height: 24px;
 				width: 100%;
 				text-align: center;
 			}
@@ -104,6 +106,10 @@
 			gap: 150px;
 			flex-direction: column;
 			align-items: center;
+		}
+
+		@media (max-width: 630px) {
+			gap: 180px;
 		}
 	}
 
@@ -149,6 +155,21 @@
 
 			@media (max-width: 1200px) {
 				right: calc(50% - 125px);
+			}
+		}
+
+		@media (max-width: 630px) {
+			width: 330px;
+			height: 330px;
+
+			&::before {
+				content: '';
+				width: 300px;
+				height: 300px;
+			}
+
+			&-text {
+				bottom: -150px;
 			}
 		}
 	}

@@ -1,50 +1,61 @@
 const body = document.body;
 const navToggle = document.querySelector('[data-element~="navToggle"]');
-const filtersToggle = document.querySelector('[data-element~="filtersToggle"]');
 
-// const navMore = document.querySelector('.header__nav-more');
-// const orderBtn = document.querySelector('[data-element="orderBtn"]');
-// const modal = document.querySelector('[data-element="orderForm"]');
-// const closeBtn = document.querySelector('[data-element="popupClose"]');
-// const overlay = modal.querySelector('.popup__overlay');
-// const swipeBtn = document.querySelector('[data-element="popupSwipe"]');
+const filtersControls = document.querySelector(".catalog__menu-controls");
+const filtersBtns = document.querySelectorAll(".catalog__menu-toggle");
+const filtersBlocks = {
+	brand: document.getElementById("brand"),
+	accord: document.getElementById("accord"),
+	gender: document.getElementById("gender")
+};
+
+// Проверяет, есть ли хотя бы одна активная кнопка
+function isAnyActive() {
+	return Array.from(filtersBtns).some(button => button.classList.contains("is-active"));
+}
+
+// Обновляет состояние блока controls
+function updateControlsVisibility() {
+	if (isAnyActive()) {
+		filtersControls.classList.remove("is-hidden");
+	} else {
+		filtersControls.classList.add("is-hidden");
+	}
+}
+
+filtersBtns.forEach(button => {
+	button.addEventListener("click", () => {
+		const blockId = button.classList.contains("brand") ? "brand" :
+						button.classList.contains("accord") ? "accord" : "gender";
+
+		if (button.classList.contains("is-active")) {
+		button.classList.remove("is-active");
+		filtersBlocks[blockId].classList.remove("is-active");
+		} else {
+		button.classList.add("is-active");
+		filtersBlocks[blockId].classList.add("is-active");
+		}
+
+		updateControlsVisibility();
+	});
+});
+
+// Изначально скрываем блок, если ни одна кнопка не активна
+updateControlsVisibility();
 
 const toggleNav = () => {
 	if (!body.classList.contains('is-nav-open')) {
 		body.classList.add('is-nav-open');
-		body.classList.remove('is-filters-open');
 	} else {
 		body.classList.remove('is-nav-open');
 	}
 };
 
-const toggleFilters = () => {
-	if (!body.classList.contains('is-filters-open')) {
-		body.classList.add('is-filters-open');
-	} else {
-		body.classList.remove('is-filters-open');
-	}
-}
-
 const handleScroll = () => {
 	(window.scrollY > 0) ?  body.classList.add('is-scrolled') : body.classList.remove('is-scrolled');
 }
 
-// const closeModal = () => {
-// 	modal.classList.remove('is-open');
-// 	body.classList.remove('is-popup-open');
-// }
-
-// const openModal = () => {
-// 	modal.classList.add('is-open');
-// 	body.classList.add('is-popup-open');
-// }
-
 navToggle.addEventListener('click', toggleNav);
-
-if (filtersToggle) {
-	filtersToggle.addEventListener('click', toggleFilters);
-}
 
 window.addEventListener("scroll", handleScroll);
 
@@ -68,47 +79,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		}
 	});
 });
-
-// if (orderBtn) {
-// 	orderBtn.addEventListener('click', () => {
-// 		openModal();
-// 	});
-
-// 	closeBtn.addEventListener('click', () => {
-// 		closeModal();
-// 	});
-
-// 	// Закрыть модальное окно при нажатии клавиши Escape
-// 	document.addEventListener('keydown', (e) => {
-// 		if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-// 			closeModal();
-// 		}
-// 	});
-
-// 	// Закрыть модальное окно при клике на overlay
-// 	overlay.addEventListener('click', () => {
-// 		closeModal();
-// 	});
-// 	// Обработка свайпа по кнопке
-// 	let touchstartY = 0;
-// 	let touchendY = 0;
-
-// 	swipeBtn.addEventListener('touchstart', e => {
-// 		touchstartY = e.changedTouches[0].screenX;
-// 	});
-
-// 	swipeBtn.addEventListener('touchend', e => {
-// 		touchendY = e.changedTouches[0].screenX;
-// 		handleSwipe();
-// 	});
-
-// 	// Функция для обработки свайпа
-// 	function handleSwipe() {
-// 		if (touchendY < touchstartY) {
-// 			closeModal();
-// 		}
-// 	}
-// }
 
 class Tabs {
 	setTabs = (tabs, id) => {
@@ -151,7 +121,6 @@ document.addEventListener('click', (e) => {
 		// setTabs(tabs, id);
 	}
 });
-
 
 [].forEach.call( document.querySelectorAll('.form__input--tel'), function(input) {
 	var keyCode;

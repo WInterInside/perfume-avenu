@@ -1,8 +1,15 @@
 .breadcrumbs {
 	margin-top: 20px;
-
+	display: flex;
+	height: 50px;
+	
 	@media (max-width: 1000px) {
-		display: none;
+		// display: none;
+		overflow-x: scroll;
+		&::-webkit-scrollbar,
+		&::-webkit-scrollbar-thumb {
+			display: none;
+		}
 	}
 
 	& a {
@@ -23,6 +30,7 @@
 	}
 
 	& ol {
+		flex-shrink: 0;
 		list-style: none;
 		padding: 0;
 		margin: 0;
@@ -50,7 +58,7 @@
 	}
 
 	.breadcrumb_font_style {
-		
+
 	}
 
 	.span_m_l_20 {

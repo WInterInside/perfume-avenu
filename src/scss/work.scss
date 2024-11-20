@@ -49,6 +49,8 @@
 
 		@media (max-width: 900px) {
 			flex-direction: column;
+			padding-bottom: 22px;
+			margin-bottom: 33px;
 
 			&::before {
 				width: 100%;
@@ -59,15 +61,9 @@
 				width: 50%;
 			}
 
-			&-value {
-				font-size: 150px;
-				font-weight: 400;
-				line-height: 190px;
-			}
-
 			&-text {
-				font-size: 32px;
-				line-height: 45px;
+				font-size: 18px;
+				line-height: 24px;
 				width: 100%;
 				text-align: center;
 			}
@@ -90,6 +86,15 @@
 		@media only screen and (max-width: 1200px) {
 			margin: 0;
 			flex-wrap: wrap;
+			gap: 30px;
+			margin-bottom: 36px;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			margin: 0;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			overflow-x: scroll;
 			gap: 30px;
 			margin-bottom: 36px;
 		}

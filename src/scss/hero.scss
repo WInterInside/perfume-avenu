@@ -4,15 +4,21 @@
 	background-image: url("../img/hero-bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: right -50px center;
 	padding: 160px 0;
 
 	@media (max-width: 1700px) {
 		padding: 100px 0;
 	}
 
+	@media (max-width: 1400px) {
+		background-image: none;
+		background: linear-gradient(90.3deg, #F4DBBB 0.51%, #D3A67A 100%);		
+	}
+
 	@media (max-width: 1100px) {
 		padding: 40px 0;
+
 	}
 
 	&__wrapper {
@@ -128,6 +134,8 @@
 
 		@media (max-width: 1100px) {
 			margin-top: 24px;
+			height: 46px;
+			width: 50%;
 		}
 
 		@media (max-width: 600px) {
@@ -154,6 +162,10 @@
 			backdrop-filter: blur(18px);
 			box-shadow: 0px 4px 32px 0px #AA804F52;
 			margin-right: 16px; /* Отступ между слайдами */
+
+			@media only screen and (max-width: 700px) {
+				margin-right: 8px;
+			}
 		}
 
 		.slick-track {
@@ -221,6 +233,10 @@
 			display: flex;
 			flex-direction: column;
 			padding: 16px 24px 16px 0;
+
+			@media only screen and (max-width: 700px) {
+				padding: 5px;
+			}
 		}
 
 		&-caption,
@@ -230,10 +246,19 @@
 			font-weight: 400;
 			line-height: 21.6px;
 			text-align: left;
+
+			@media only screen and (max-width: 700px) {
+				font-size: 16px;
+				line-height: 18px;
+			}
 		}
 
 		&-name {
 			font-weight: 700;
+
+			@media only screen and (max-width: 700px) {
+				font-weight: 600;
+			}
 		}
 
 		&-link {
@@ -243,12 +268,22 @@
 			text-transform: uppercase;
 			padding: 16px;
 
+			@media only screen and (max-width: 700px) {
+				padding: 12px 5px;
+				font-size: 12px;
+				line-height: 16px;
+			}
+
 			@media (hover: hover) {
 				&:hover {
 					background-color: darken($color: #D8B075A3, $amount: 20%);
 					color: #ffffff;
 				}
 			}
+		}
+
+		@media only screen and (max-width: 700px) {
+			gap: 10px;
 		}
 	}
 }
