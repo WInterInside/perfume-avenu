@@ -2,46 +2,49 @@ const body = document.body;
 const navToggle = document.querySelector('[data-element~="navToggle"]');
 
 const filtersControls = document.querySelector(".catalog__menu-controls");
-const filtersBtns = document.querySelectorAll(".catalog__menu-toggle");
-const filtersBlocks = {
-	brand: document.getElementById("brand"),
-	accord: document.getElementById("accord"),
-	gender: document.getElementById("gender")
-};
 
-// Проверяет, есть ли хотя бы одна активная кнопка
-function isAnyActive() {
-	return Array.from(filtersBtns).some(button => button.classList.contains("is-active"));
-}
+if (filtersControls) {	
+	const filtersBtns = document.querySelectorAll(".catalog__menu-toggle");
+	const filtersBlocks = {
+		brand: document.getElementById("brand"),
+		accord: document.getElementById("accord"),
+		gender: document.getElementById("gender")
+	};
 
-// Обновляет состояние блока controls
-function updateControlsVisibility() {
-	if (isAnyActive()) {
-		filtersControls.classList.remove("is-hidden");
-	} else {
-		filtersControls.classList.add("is-hidden");
+	// Проверяет, есть ли хотя бы одна активная кнопка
+	function isAnyActive() {
+		return Array.from(filtersBtns).some(button => button.classList.contains("is-active"));
 	}
-}
 
-filtersBtns.forEach(button => {
-	button.addEventListener("click", () => {
-		const blockId = button.classList.contains("brand") ? "brand" :
-						button.classList.contains("accord") ? "accord" : "gender";
-
-		if (button.classList.contains("is-active")) {
-		button.classList.remove("is-active");
-		filtersBlocks[blockId].classList.remove("is-active");
+	// Обновляет состояние блока controls
+	function updateControlsVisibility() {
+		if (isAnyActive()) {
+			filtersControls.classList.remove("is-hidden");
 		} else {
-		button.classList.add("is-active");
-		filtersBlocks[blockId].classList.add("is-active");
+			filtersControls.classList.add("is-hidden");
 		}
+	}
 
-		updateControlsVisibility();
+	filtersBtns.forEach(button => {
+		button.addEventListener("click", () => {
+			const blockId = button.classList.contains("brand") ? "brand" :
+							button.classList.contains("accord") ? "accord" : "gender";
+
+			if (button.classList.contains("is-active")) {
+			button.classList.remove("is-active");
+			filtersBlocks[blockId].classList.remove("is-active");
+			} else {
+			button.classList.add("is-active");
+			filtersBlocks[blockId].classList.add("is-active");
+			}
+
+			updateControlsVisibility();
+		});
 	});
-});
 
-// Изначально скрываем блок, если ни одна кнопка не активна
-updateControlsVisibility();
+	// Изначально скрываем блок, если ни одна кнопка не активна
+	updateControlsVisibility();
+}
 
 const toggleNav = () => {
 	if (!body.classList.contains('is-nav-open')) {
