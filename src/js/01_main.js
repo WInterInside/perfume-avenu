@@ -3,7 +3,7 @@ const navToggle = document.querySelector('[data-element~="navToggle"]');
 
 const filtersControls = document.querySelector(".catalog__menu-controls");
 
-if (filtersControls) {	
+if (filtersControls) {
 	const filtersBtns = document.querySelectorAll(".catalog__menu-toggle");
 	const filtersBlocks = {
 		brand: document.getElementById("brand"),
@@ -82,6 +82,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		}
 	});
 });
+
+
+// Получаем оба списка
+const workSteps = document.querySelectorAll('.work__step');
+if (workSteps.length > 0) {
+	const workStepsTumb = document.querySelectorAll('.work__steps-min-item');
+	// Функция для определения видимости элемента
+	function isElementInViewport(el) {
+		const rect = el.getBoundingClientRect();
+		return (
+			rect.top >= 0 &&
+			rect.left >= 0 &&
+			rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* На случай скролла внутри контейнера */
+			rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		);
+	}
+
+	// Обработчик события прокрутки
+	document.querySelector('.work__steps').addEventListener('scroll', () => {
+		workSteps.forEach((item, index) => {
+			if (isElementInViewport(item)) {
+				workStepsTumb[index].classList.add('is-visible'); // Показываем соответствующий элемент маленького списка
+			} else {
+				workStepsTumb[index].classList.remove('is-visible'); // Скрываем, если больше не видно
+			}
+		});
+	});
+}
 
 class Tabs {
 	setTabs = (tabs, id) => {

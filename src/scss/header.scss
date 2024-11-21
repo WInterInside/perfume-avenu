@@ -144,7 +144,6 @@
 		}
 
 		@media only screen and (max-width: 1000px) {
-			margin: 0 auto;
 			width: 177px;
 			height: 30px;
 
@@ -518,7 +517,6 @@ body.is-nav-open {
 
 body.is-scrolled {
 	.header {
-		// transform: translateY(-76px);
 		box-shadow: 0px 11px 15px -10px #000000c2;
 
 		&__wrapper {

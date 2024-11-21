@@ -262,11 +262,13 @@
 		}
 
 		&-link {
+			flex-shrink: 0;
 			margin-top: auto;
 			background-color: #D8B075A3;
 			color: #755530;
 			text-transform: uppercase;
 			padding: 16px;
+			min-width: 132px;
 
 			@media only screen and (max-width: 700px) {
 				padding: 12px 5px;
@@ -276,8 +278,8 @@
 
 			@media only screen and (max-width: 700px) {
 				padding: 12px 4px;
-				font-size: 11px;
-				line-height: 14px;
+				font-size: 10px;
+				line-height: 13px;
 			}
 
 			@media (hover: hover) {
